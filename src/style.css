@@ -1,1 +1,56 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+.card {
+  width: 300px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 100px;
+  margin-left: 600px;
+}
+
+.upperCorner {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 1.5rem;
+}
+
+.lowerCorner {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 1.5rem;
+}
+
+.upperCorner::before,
+.lowerCorner::before {
+  content: "";
+}
+
+.upperCorner.heart::before,
+.lowerCorner.heart::before {
+  content: "♥";
+  color: red;
+}
+
+.upperCorner.diamond::before,
+.lowerCorner.diamond::before {
+  content: "♦";
+}
+
+.upperCorner.spade::before,
+.lowerCorner.spade::before {
+  content: "♠";
+}
+
+.upperCorner.club::before,
+.lowerCorner.club::before {
+  content: "♣";
+}
